@@ -2,27 +2,15 @@
 server:
   port: 8088
 spring:
-  #模板引擎配置
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    mode: HTML
-    encoding: UTF-8
-    cache: false
-    servlet:
-      content-type: text/html
-  #静态文件配置
-  resources:
-    static-locations: classpath:/static,classpath:/META-INF/resources,classpath:/templates/
   #jdbc配置
   datasource:
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:oracle:thin:@192.168.90.103:1521:hkhszq
+    username: hsdc_ro
+    password: hsdc0011
+    driver-class-name: oracle.jdbc.driver.OracleDriver
 #mybatis配置
 mybatis:
   #映射文件路径
   mapper-locations: classpath:mapper/*.xml
-  #模型所在的保命
-  type-aliases-package: com.henry.mybatis.entity
+
+
